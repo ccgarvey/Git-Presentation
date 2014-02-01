@@ -1,0 +1,60 @@
+Pre-talk:
+-Prepare what I'm going to talk about during the talk
+-Create a presentation
+-Create a handout sheet!
+
+Talk break-down:
+-Brief intro: I love git, what I will/won't cover during this talk (4min) (see below)
+    -Ask questions during the talk too!
+-Why git? What is it? How does it work?(13m)
+    -VCSes in general (5min)
+    "A VCS allows you to: revert files back to a previous state, revert the entire project back to a previous state, review changes made over time, see who last modified something that might be causing a problem, who introduced an issue and when, and more. Using a VCS also means that if you screw things up or lose files, you can generally recover easily. In addition, you get all this for very little overhead."
+    -How git deals with data (3min):
+        -thinks of data as snapshots of a file
+        -you keep all files locally
+        -almost everything is undoable
+        -There is a .git folder that stores all the metadata
+    -3 states (5min):
+        -modified (you make changes to your local files)
+        -staged (you take a snapshot of the files which is added to the staging area)
+        -committed (saved permanently in the .git folder)
+
+-How to get git (7min) (and on Windows)
+-Basic git commands (20min)
+    Simple repository:
+    -init
+    -status
+    -add
+        -*
+        -N
+    -tags
+    -commmit
+        -a
+        -m
+        -HOW TO WRITE A GOOD COMMIT MESSAGE
+    -(discussion of commit IDs)
+    -diff
+    -show?
+    Shared repository:
+    -push, pull
+    -fetch
+    -log
+        --oneline
+        --graph
+-Resources for learning git (3min)
+    -Git book: Pro Git! git-scm.com/book
+    -Learn git in web browser: http://try.github.io
+    -Google!
+    -Ask me!!
+-Websites for hosting git code (2min)
+    -GitHub
+    -BitBucket
+-Questions? (5min)
+
+Handout:
+-Basic git commands from talk
+    -+ some?
+-Resources for learning git
+-Online repository hosts:
+    -Github (10 free for .edu) - check
+    -bitbucket (free private)
