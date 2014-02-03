@@ -28,7 +28,7 @@ Clarissa Garvey, Emory University
 } 
 \begin{frame}{Overview}
 
-{\large Contents:}
+{\LARGE Contents:}
 \begin{enumerate}
 \item What is Git?
 \item Why you should use Git %and where to get more info
@@ -72,6 +72,49 @@ Clarissa Garvey, Emory University
 \item Allows for quick annotation of changes to files
 \item It's {\LARGE great!}
 \end{itemize}
+\end{frame}
+
+\begin{frame}{How Git works}
+\vspace{-10mm}
+{\LARGE How Git Handles Data}
+
+\begin{itemize}
+\item Data as snapshots
+\begin{itemize}
+\item Contrasts with $\Delta$s
+\end{itemize}
+\item Files are stored locally
+\begin{itemize}
+\item Current files in base directory
+\item Metadata in .git file
+\end{itemize}
+\item Almost everything is undoable
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{How Git works}
+
+{\LARGE 3-Tier Model}\\
+\begin{itemize}
+\item Tracked vs. untracked files
+
+\item {\large Modified}
+\begin{itemize}
+\item There are unstaged changes to files since the last commit
+\end{itemize}
+
+\item {\large Staged}
+\begin{itemize}
+\item A snapshot of the file has been taken with the intent to commit later
+\end{itemize}
+\item {\large Committed}
+\begin{itemize}
+\item The changes have been saved permanently in the .git file with added metadata
+\end{itemize}
+\end{itemize}
+
+
 \end{frame}
 
 \end{document}
