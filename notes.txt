@@ -6,8 +6,9 @@ Pre-talk:
 Talk break-down:
 -Brief intro: I love git, what I will/won't cover during this talk (4min) (see below)
     -Ask questions during the talk too!
--Why git? What is it? How does it work?(13m)
-    -VCSes in general (5min)
+    -Won't talk about other VCSs, tagging in git
+-Why git? What is it? How does it work?(12m)
+    -VCSes in general (4min)
     "A VCS allows you to: revert files back to a previous state, revert the entire project back to a previous state, review changes made over time, see who last modified something that might be causing a problem, who introduced an issue and when, and more. Using a VCS also means that if you screw things up or lose files, you can generally recover easily. In addition, you get all this for very little overhead."
     -How git deals with data (3min):
         -thinks of data as snapshots of a file
@@ -18,34 +19,93 @@ Talk break-down:
         -modified (you make changes to your local files)
         -staged (you take a snapshot of the files which is added to the staging area)
         -committed (saved permanently in the .git folder)
-
--How to get git (7min) (and on Windows)
--Basic git commands (20min)
-    Simple repository:
-    -init
-    -status
-    -add
-        -*
-        -N
-    -tags
-    -commmit
-        -a
-        -m
-        -HOW TO WRITE A GOOD COMMIT MESSAGE
-    -(discussion of commit IDs)
-    -diff
-    -show?
-    Shared repository:
-    -push, pull
-    -fetch
-    -log
-        --oneline
-        --graph
--Resources for learning git (3min)
+-Resources for learning git (1min)
     -Git book: Pro Git! git-scm.com/book
     -Learn git in web browser: http://try.github.io
     -Google!
     -Ask me!!
+-How to get git (7min) (and on Windows)
+    -Linux:
+        -apt-get install gut
+        -yum install git-core
+        -or by source (see website)
+    -Mac:
+        -Visual: http://code.google.com/p/git-osx-installer
+        -MacPorts: sudo port install git-core +svn +doc +bash_completion
+    -Windows:
+        -Git bash + GUI from .exe installer: http://msysgit.github.com/
+    -Setting username and email:
+        -git config (--global if for whole system) user.name "Git User"
+        -git config (--global if for whole system) user.email gitisgreat@domain.com
+        -There are other config options you can set, see book ch. 7
+
+-Basic git commands (20min)
+    Simple repository:
+    -init (doesn't matter if you have files in the dir or not)
+    -status
+        -tracked vs. untracked
+        -.gitignore
+            -# is comments
+            -! is don't ignore
+    -add
+        -*
+        -N
+    -reset HEAD [file] to unstage a staged file
+    -commmit
+        -a
+        -Difference between modified and staged for commits
+        -m
+        -HOW TO WRITE A GOOD COMMIT MESSAGE
+        -((too intense) --amend, changes last commit)
+    -(discussion of commit IDs)
+    -diff (diff to staged or committed, can specify commit hash)
+        -only shows unstaged commits
+        --staged or --cached to show difference between staged and previous commits
+    -rm [file]: stage file removal
+        -deleting from the pwd makes an untracked change
+        -rm --cached removes the staged snapshot of a file
+    -log: 
+        -reverse chronological
+        -[number] shows the last n commits
+        -p shows the diffs for the commits
+        -There are LOTS of log options, check out the book section on it!
+        --oneline, graph
+    -checkout:
+        -- [filename] discards the changes in the working directory (dangerous)
+        
+    Shared repository:
+    -clone [url]: get an existing repository without using init
+        -url can be web url, git://, or user@server:/path.git
+    -remote: see what remote servers are configured
+        (-v shows the URL)
+        (-remote add [shortname] [url] adds a repository as a short name)
+        (-remote rename renames a short name)
+    -fetch [remote name] gets all data from a remote project that you don't have
+        -gets the data in the .git folder, so it doesn't modify your local data
+        -you need to merge later if there are any conflicts (or if you want branches you don't have yet)
+    -pull [remote name]: automatically fetch and merge a remote repository
+        -in older versions of git, you should commit before pulling
+    -push
+        -share your work on the project with another branch
+        -if you clone, fetch, or pull and someone else pushes first, you need to pull before you can push    
+    -branching!!!
+        -how it works, quickly (pointers to parent)
+        -branch [name] creates a branch
+        -checkout and branch: to switch between branches, use checkout
+            -must commit changes before switching
+        -branch -d deletes a branch
+        -branch (no args) lists branches
+        -branches must be pushed to share: git push [remote] [localbranch(optional :remotebranch)]
+    -merge!!
+        -fast-forward (easiest, moves a pointer)
+        -full auto-merge (git automatically finds a common ancestor, merges itself)
+        -auto-merge with conflicts (you get info in your files you must resolve, you can use git mergetool to merge)
+            -must commit merge after
+        -don't do it with uncommitted changes!
+        -when you fetch and it gets remote branches, you must merge the branches in
+        -rebasing is another way to combine divergent histories that I won't get in to.
+    General:
+    -git help <X>, git <X> --help, man git-<X>
 -Websites for hosting git code (2min)
     -GitHub
     -BitBucket
@@ -53,7 +113,7 @@ Talk break-down:
 
 Handout:
 -Basic git commands from talk
-    -+ some?
+    -+ some advanced?
 -Resources for learning git
 -Online repository hosts:
     -Github (10 free for .edu) - check
