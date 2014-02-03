@@ -34,12 +34,12 @@ Talk break-down:
         -MacPorts: sudo port install git-core +svn +doc +bash_completion
     -Windows:
         -Git bash + GUI from .exe installer: http://msysgit.github.com/
-    -Setting username and email:
+
+-Basic git commands (20min)
+    Setting username and email:
         -git config (--global if for whole system) user.name "Git User"
         -git config (--global if for whole system) user.email gitisgreat@domain.com
         -There are other config options you can set, see book ch. 7
-
--Basic git commands (20min)
     Simple repository:
     -init (doesn't matter if you have files in the dir or not)
     -status
