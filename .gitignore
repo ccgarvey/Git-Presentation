@@ -1,0 +1,4 @@
+git_presentation.*
+!*.pdf
+!*.tex
+*.aux
