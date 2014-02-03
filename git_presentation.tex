@@ -1,6 +1,7 @@
 \include{beamer}
-
 \documentclass[xcolor=dvipsnames]{beamer} 
+
+\usepackage{listings}
 \usecolortheme[named=Green]{structure} 
 \usetheme[height=10mm]{Rochester}
 \setbeamertemplate{navigation symbols}{}
@@ -112,6 +113,29 @@ Clarissa Garvey, Emory University
 \begin{itemize}
 \item The changes have been saved permanently in the .git file with added metadata
 \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Getting Git}
+
+{\LARGE Linux} (if not pre-installed)
+\begin{itemize}
+\item \begin{semiverbatim} apt-get install git \end{semiverbatim}
+\item \begin{semiverbatim} yum install git-core \end{semiverbatim}
+\end{itemize}
+
+\vspace{2mm}
+{\LARGE Mac}
+\begin{itemize}
+\item With MacPorts: \begin{semiverbatim} sudo port install git-core +svn +doc +bash{\_}completion \end{semiverbatim}
+\item With a GUI installer: \url{http://code.google.com/p/git-osx-installer}
+\end{itemize}
+
+\vspace{2mm}
+{\LARGE Windows}
+\begin{itemize}
+\item Git bash + GUI installer: \url{http://msysgit.github.com/}
 \end{itemize}
 
 
