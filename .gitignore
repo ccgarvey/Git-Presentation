@@ -1,4 +1,10 @@
-git_presentation.*
+*.log
+*.out
+*.gz
+*.nav
+*.snm
+*.toc
 !*.pdf
 !*.tex
 *.aux
+*.swp
