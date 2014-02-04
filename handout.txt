@@ -103,7 +103,8 @@ git push
 Create, delete, or get information about branches:
 git branch [flags] [branch name]
 -With no arguments, git branch lists the current branches
--With just a branch name (ex. "experimental"), creates
+-With just a branch name (ex. "experimental"), creates a branch (but does not
+    switch the current branch)
 -To switch between branches, use checkout
     -You must commit changes before switching
 -The flag -d deletes a branch
