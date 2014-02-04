@@ -32,10 +32,10 @@ git add [flag(s)] filename
 Unstage a file:
 git reset HEAD filename
 -This does not change the file in your working directory, but reset can with
-    different argments, so be careful using it
+    different arguments, so be careful using it
 
 Commit file(s):
-git commmit [flags]
+git commit [flags]
 -The flag -a automatically stages modified/deleted files for this commit
 -The flag -m allows you to write a commit message in-line:
     git commit -m "Message here"
@@ -81,7 +81,7 @@ git clone repository_url
 See a list of the remote repositories:
 git remote [flags]
 -The flag -v shows the URL for each remote
--The flag/phrase "-remote add shortname url" adds a repository with an
+-The flag/phrase "-remote add shortname URL" adds a repository with an
     abbreviated name
 -The flag/phrase "-remote rename" renames a short name)
 
@@ -91,7 +91,7 @@ git fetch remote_name
 -You need to merge later if there are any conflicts (or if you want branches
     you don't have yet)
     
-Fetch and merge a reporitory at the same time:
+Fetch and merge a repository at the same time:
 git pull remote_name
 -in older versions of git, you should commit before pulling (so do it always)
 
