@@ -11,12 +11,12 @@
 {\bf Get help about commands}:\\
 \texttt{git help [command]}\\
 \texttt{git [command] --help}\\
-\texttt{man git [command]}\\
+\texttt{man git[-command]}\\
 
 {\bf Setting username and email}:\\
 \texttt{git config [flags] user.name "Git User"}\\
 \texttt{git config [flags] user.email gitisgreat@domain.com}\\
-\textbullet\, You can use the flag \texttt{--global} if you want to set these for the whole system\\
+\textbullet\, You can use the flag \texttt{--global} if you want to set these for the user's whole system; otherwise, it's just set for the current repository.\\
 
 {\bf Start a new repository}:\\
 \texttt{git init}\\
@@ -43,10 +43,12 @@
 \textbullet\, The flag -a automatically stages modified/deleted files for this commit\\
 \textbullet\, The flag -m allows you to write a commit message in-line:\\
  \hspace*{6mm}\texttt{git commit -m "Message here"}\\
-\textbullet\, The flag \texttt{--amend} can be used if you goof up a commit. See\\ \url{http://git-scm.com/book/en/Git-Basics-Undoing-Things} as this can mess things up if you do it wrong.\\
+ (generally, your commit messages should be more detailed than this)\\
+\textbullet\, The flag \texttt{--amend} can be used if you goof up a commit. See\\ \url{http://git-scm.com/book/en/Git-Basics-Undoing-Things} as this can mess things up if you do it wrong, and you don't want to do it on things that have been published somewhere as it ``rewrites history''\\
 
 {\bf See the changes to a file}:\\
 \texttt{git diff [commit hash] [filename]}\\
+\textbullet\, By default (with no arguments) shows the diff for all modified files\\
 \textbullet\, This is the diff to the last staged (or committed if none are staged) version (this means that if you stage then run \texttt{git diff}, it won't show any difference)\\
 \textbullet\, The flags \texttt{--staged} or \texttt{--cached} can be used to show difference between the currently staged files and previous commit(s)\\
 
@@ -112,7 +114,7 @@
 
 {\bf Merge branch in a way that produces linear commit history (rebase)}:\\
 \texttt{git rebase branch{\_}to{\_}rebase{\_}on}\\
-\textbullet\, \emph{NEVER EVER PUSH REBASED CODE TO A PUBLIC REPOSITORY}.
+\textbullet\, \emph{NEVER PUSH REBASED CODE TO A PUBLIC REPOSITORY}. (rewrites history)
 \begin{quoting}[vskip=0pt]
 ``If you [do], people will hate you, and you’ll be scorned by friends and family.'' --Git Pro, \url{http://git-scm.com/book/en/Git-Branching-Rebasing}
 \end{quoting}

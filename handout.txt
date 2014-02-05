@@ -3,12 +3,13 @@
 Get help about commands:
 git help [command]
 git [command] --help
-man git [command]
+man git[-command]
     
 Setting username and email:
 git config [flags] user.name "Git User"
 git config [flags] user.email gitisgreat@domain.com
--You can use the flag --global if you want to set these for the whole system
+-You can use the flag --global if you want to set these for the user's whole
+    system; otherwise, it's just set for the current repository.
 
 Start a new repository:
 git init
@@ -41,12 +42,15 @@ git commit [flags]
 -The flag -a automatically stages modified/deleted files for this commit
 -The flag -m allows you to write a commit message in-line:
     git commit -m "Message here"
+    (generally, your commit messages should be more detailed than this)
 -The flag --amend can be used if you goof up a commit. See
     http://git-scm.com/book/en/Git-Basics-Undoing-Things -- this can mess
-    things up if you do it wrong.
+    things up if you do it wrong, and you don't want to do it on things that
+    have been published somewhere as it "rewrites history"
 
 See the changes to a file:
 git diff [commit hash] [filename]
+-By default (with no arguments) shows the diff for all modified files
 -This is the diff to the last staged (or committed if none are staged) version
     (this means that if you stage then run diff, it won't show any difference)
 -The flags --staged or --cached can be used to show difference between the
@@ -126,7 +130,7 @@ git merge
 
 Merge branch in a way that produces linear commit history (rebase):
 git rebase branch_to_rebase_on
--NEVER EVER EVER PUSH REBASED CODE TO A PUBLIC REPOSITORY.
+-NEVER EVER EVER PUSH REBASED CODE TO A SHARED REPOSITORY. (rewrites history)
     -"If you [do], people will hate you, and you’ll be scorned by friends and
      family." --Git Pro, http://git-scm.com/book/en/Git-Branching-Rebasing
 -This rebases your current branch onto the branch specified
