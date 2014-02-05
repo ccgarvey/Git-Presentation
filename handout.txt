@@ -28,6 +28,9 @@ git add [flag(s)] filename
 -* is a wildcard in the file name
 -The -N argument allows you show your intent to add them, which allows you to
     later use -a for new files.
+-You can stage parts of files! Use the flag -p to go into patch mode. Use the 
+    command ? for information on commands and begin adding sections. Also see
+    http://git-scm.com/book/en/Git-Tools-Interactive-Staging for more info.
 
 Unstage a file:
 git reset HEAD filename
