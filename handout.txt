@@ -156,8 +156,8 @@ Windows:
 Git Pro book:
 http://git-scm.com/book
 
-Git Pro book:
-http://git-scm.com/book
+Try Git in-browser:
+http://try.github.io
 
 Websites for hosting git code:
 -GitHub: https://github.com/
