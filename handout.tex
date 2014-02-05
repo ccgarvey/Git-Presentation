@@ -4,7 +4,15 @@
 \usepackage{quoting} %quote without extra white space
 
 \begin{document}
-{\setlength{\parindent}{0cm}
+\begin{center}
+{\large Git Basic Commands}
+\end{center}
+{\setlength{\parindent}{0cm}    
+{\bf Get help about commands}:\\
+\texttt{git help [command]}\\
+\texttt{git [command] --help}\\
+\texttt{man git [command]}\\
+
 {\bf Setting username and email}:\\
 \texttt{git config [flags] user.name "Git User"}\\
 \texttt{git config [flags] user.email gitisgreat@domain.com}\\
@@ -104,7 +112,7 @@
 
 {\bf Merge branch in a way that produces linear commit history (rebase)}:\\
 \texttt{git rebase branch{\_}to{\_}rebase{\_}on}\\
-\textbullet\, {\bf NEVER EVER PUSH REBASED CODE TO A PUBLIC REPOSITORY.}
+\textbullet\, NEVER EVER PUSH REBASED CODE TO A PUBLIC REPOSITORY.
 \begin{quoting}[vskip=0pt]
 ``If you [do], people will hate you, and you’ll be scorned by friends and family.'' --Git Pro, \url{http://git-scm.com/book/en/Git-Branching-Rebasing}
 \end{quoting}
@@ -114,15 +122,31 @@
     \texttt{git checkout branch{\_}rebased{\_}on}\\
     \texttt{git merge}\\
 \textbullet\, This produces a linear history, instead of a branched-joined history\\
-    
-{\bf Get help about commands}:\\
-\texttt{git help [command]}\\
-\texttt{git [command] --help}\\
-\texttt{man git [command]}\\
 \vspace{5mm}
+
+\begin{center}
+{\large Git-related Resources}
+\end{center}
+{\bf Git website}:\\
+\url{http://git-scm.com/}\\
+
+{\bf Getting Git}:\\
+Linux (if not pre-installed):\\
+\texttt{apt-get install git}\\
+\texttt{yum install git-core}\\
+
+Mac:\\
+With MacPorts: \texttt{sudo port install git-core +svn +doc +bash{\_}completion}\\
+Using a GUI installer: \url{http://code.google.com/p/git-osx-installer}\\
+
+Windows:\\
+Git bash + GUI installer: \url{http://msysgit.github.com/}\\
+
+{\bf Git Pro book}:\\
+\url{http://git-scm.com/book}\\
 
 {\bf Websites for hosting git code}:\\
 \textbullet\, GitHub: \url{https://github.com/}\\
 \textbullet\, BitBucket: \url{https://bitbucket.org/}\\
-}
+} %end of paragraph indentation suppression
 \end{document}

@@ -1,10 +1,9 @@
-Handout:
--Basic git commands from talk
-    -+ some advanced?
--Resources for learning git
--Online repository hosts:
-    -Github
-    -bitbucket (free private)
+                                GIT BASIC COMMANDS
+
+Get help about commands:
+git help [command]
+git [command] --help
+man git [command]
     
 Setting username and email:
 git config [flags] user.name "Git User"
@@ -137,13 +136,30 @@ git rebase branch_to_rebase_on
     git checkout branch_rebased_on
     git merge
 -This produces a linear history, instead of a branched-joined history
-    
-Get help about commands:
-git help [command]
-git [command] --help
-man git [command]
 
+
+                            GIT-RELATED RESOURCES
+                            
+Main Git website:
+http://git-scm.com/
+
+Getting Git:
+Linux (if not pre-installed):
+    apt-get install git
+    yum install git-core
+Mac:
+    With MacPorts: sudo port install git-core +svn +doc +bash_completion
+    Using a GUI installer: http://code.google.com/p/git-osx-installer
+Windows:
+    Git bash + GUI installer: http://msysgit.github.com/
+
+Git Pro book:
+http://git-scm.com/book
+
+Git Pro book:
+http://git-scm.com/book
 
 Websites for hosting git code:
 -GitHub: https://github.com/
 -BitBucket: https://bitbucket.org/
+
