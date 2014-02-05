@@ -42,7 +42,7 @@
 \texttt{git commit [flags]}\\
 \textbullet\, The flag -a automatically stages modified/deleted files for this commit\\
 \textbullet\, The flag -m allows you to write a commit message in-line:\\
- \hspace{5mm}\texttt{git commit -m "Message here"}\\ %TODO 
+ \hspace*{6mm}\texttt{git commit -m "Message here"}\\
 \textbullet\, The flag \texttt{--amend} can be used if you goof up a commit. See\\ \url{http://git-scm.com/book/en/Git-Basics-Undoing-Things} as this can mess things up if you do it wrong.\\
 
 {\bf See the changes to a file}:\\
@@ -55,8 +55,8 @@
 \textbullet\, directly deleting from the actual directory makes an unstaged change\\
 \textbullet\, The flag \texttt{--cached} removes the staged snapshot of a file, but not the file itself\\
 
-{\bf See commit history}:
-\texttt{git log [flags]}
+{\bf See commit history}:\\
+\texttt{git log [flags]}\\
 \textbullet\, Commits are displayed in reverse chronological order\\
 \textbullet\, The flag \texttt{-<number n>} shows the last n commits (eg. \texttt{git log -}5)\\
 \textbullet\, The flag -p shows the diffs for the commits\\
@@ -83,7 +83,7 @@
 {\bf Get data from a remote repository that you don't already have}:\\
 \texttt{git fetch remote{\_}name}\\
 \textbullet\, This puts the data in the .git folder, so it doesn't modify your own files\\
-\textbullet\, You need to merge later if there are any conflicts (or if you want branches you don't have yet)\\
+\textbullet\, You need to merge later if there are conflicts (or if you want branches you don't have yet)\\
     
 {\bf Fetch and merge a repository at the same time}:
 \texttt{git pull remote{\_}name}\\
@@ -99,8 +99,8 @@
 \textbullet\, With just a branch name (ex. "experimental"), creates a branch (but does not switch the current branch)\\
 \textbullet\, To switch between branches, use \texttt{checkout} (Note: you must commit changes before switching)\\
 \textbullet\, The flag \texttt{-d} deletes a branch\\
-\textbullet\, Branches must be pushed to share: 
-\texttt{git push remote{\_}name localbranch[:remotebranch]}\\ %TODO
+\textbullet\, Branches must be pushed to share:\\
+ \hspace*{6mm}\texttt{git push remote{\_}name localbranch[:remotebranch]}\\
 
 {\bf Merge disparate files or branches}:\\
 \texttt{git merge}\\    
@@ -112,15 +112,15 @@
 
 {\bf Merge branch in a way that produces linear commit history (rebase)}:\\
 \texttt{git rebase branch{\_}to{\_}rebase{\_}on}\\
-\textbullet\, NEVER EVER PUSH REBASED CODE TO A PUBLIC REPOSITORY.
+\textbullet\, \emph{NEVER EVER PUSH REBASED CODE TO A PUBLIC REPOSITORY}.
 \begin{quoting}[vskip=0pt]
 ``If you [do], people will hate you, and you’ll be scorned by friends and family.'' --Git Pro, \url{http://git-scm.com/book/en/Git-Branching-Rebasing}
 \end{quoting}
 \textbullet\, This rebases your current branch onto the branch specified\\
 \textbullet\, This finds the common ancestor of the two branches involved, finds the differences between the two, and applies them to the branch being rebased onto so that there are new commits ending with the files as they are in your current branch (if this is confusing, try the git pro book link provided)\\
 \textbullet\, When the rebase is done, merge is used and automatically combines the branches:\\
-    \texttt{git checkout branch{\_}rebased{\_}on}\\
-    \texttt{git merge}\\
+\hspace*{6mm}\texttt{git checkout branch{\_}rebased{\_}on}\\
+\hspace*{6mm}\texttt{git merge}\\
 \textbullet\, This produces a linear history, instead of a branched-joined history\\
 \vspace{5mm}
 
