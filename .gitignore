@@ -7,4 +7,5 @@
 !*.pdf
 !*.tex
 *.aux
-*.swp
+*swp
+

@@ -69,12 +69,15 @@ git log [flags]
 -The --graph flag shows a neat graphical representation of the history
 
 Update files in the current directory:
-git checkout <branch or (-- file_path)> [commit]
+git checkout [branch/commit] [--] [file_path]
 -Used to change the current branch to another branch or change a file to a
     previous version
--This discards the changes in the current working directory, so be careful
-    with it. You may wish to look up how to use it while gaining familiarity
--The -- is required for files, because file and branch names can be the same
+-This discards the changes in the current working directory when specifying
+    a file, so be careful with it. You may wish to look up how to use it
+    while gaining familiarity
+-The -- is used to specify a file is being checked out; just running
+    git checkout filename will create a branch with that name.
+-Can use a commit tag in place of the --
     
 Create a local copy of an existing repository:
 git clone repository_url

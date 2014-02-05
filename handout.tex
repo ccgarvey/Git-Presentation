@@ -65,10 +65,10 @@
 \textbullet\, The \texttt{--graph} flag shows a neat graphical representation of the history\\
 
 {\bf Update files in the current directory}:\\
-\texttt{git checkout <branch or (-- file{\_}path)> [commit]}\\
+\texttt{git checkout [branch/commit] [--] [file{\_}path]> [commit]}\\
 \textbullet\, Used to change the current branch to another branch or change a file to a previous version\\
-\textbullet\, This discards the changes in the current working directory, so be careful with it. You may wish to look up how to use it while gaining familiarity\\
-\textbullet\, The \texttt{--} is required for files, because file and branch names can be the same\\
+\textbullet\, This discards the changes in the current working directory when specifying a file, so be careful with it. You may wish to look up how to use it while gaining familiarity\\
+\textbullet\, The \texttt{--} is used to specify a file is being checked out; just running \texttt{git checkout filename} will create a branch with that name.\\
     
 {\bf Create a local copy of an existing repository}:\\
 \texttt{git clone repository{\_}url}\\
