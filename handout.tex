@@ -38,6 +38,7 @@
 \texttt{git reset HEAD filename}\\
 \textbullet\, This does not change the file in your working directory, but reset can with different arguments, so be careful using it\\
 
+\newpage
 {\bf Commit file(s)}:\\
 \texttt{git commit [flags]}\\
 \textbullet\, The flag -a automatically stages modified/deleted files for this commit\\
@@ -112,6 +113,7 @@
 \textbullet\, When you fetch and it gets remote branches, you must merge the branches in\\
 \textbullet\, Rebasing is another way to combine divergent histories (see below)\\
 
+\newpage
 {\bf Merge branch in a way that produces linear commit history (rebase)}:\\
 \texttt{git rebase branch{\_}to{\_}rebase{\_}on}\\
 \textbullet\, \emph{NEVER PUSH REBASED CODE TO A PUBLIC REPOSITORY}. (rewrites history)
@@ -124,8 +126,8 @@
 \hspace*{6mm}\texttt{git checkout branch{\_}rebased{\_}on}\\
 \hspace*{6mm}\texttt{git merge}\\
 \textbullet\, This produces a linear history, instead of a branched-joined history\\
-\vspace{5mm}
 
+\newpage
 \begin{center}
 {\large Git-related Resources}
 \end{center}
