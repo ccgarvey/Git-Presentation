@@ -77,7 +77,6 @@ git checkout [branch/commit] [--] [file_path]
     while gaining familiarity
 -The -- is used to specify a file is being checked out; just running
     git checkout filename will create a branch with that name.
--Can use a commit tag in place of the --
     
 Create a local copy of an existing repository:
 git clone repository_url
